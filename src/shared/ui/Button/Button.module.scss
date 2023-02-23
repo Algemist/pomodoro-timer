@@ -1,0 +1,38 @@
+.Button {
+    outline: none;
+    cursor: pointer;
+    background: none;
+    padding: 19px 50px;
+    color: var(--white);
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.primary {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+
+    &:hover:not(:focus-visible).hover {
+        background-color: var(--green-dark);
+        border-color: var(--green-dark);
+    }
+}
+
+.secondary {
+    border: 2px solid var(--red);
+    background-color: transparent;
+    color: var(--red);
+
+    &:hover:not(:focus-visible).hover {
+        background-color: var(--red-dark);
+        border-color: var(--red-dark);
+        color: var(--white);
+    }
+}
+
+.disabled {
+    background-color: transparent;
+    border-color: var(--gray-dark);
+    color: var(--gray-dark);
+    cursor: default;
+}

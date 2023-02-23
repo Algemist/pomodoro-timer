@@ -2,4 +2,9 @@
     color: var(--red);
     text-decoration: none;
     fill: currentcolor;
+    transition: color 0.3s ease-in-out;
+
+    &:hover:not(:focus-visible) {
+        color: var(--red-dark);
+    }
 }

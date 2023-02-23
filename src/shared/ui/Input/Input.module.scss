@@ -1,0 +1,18 @@
+.Input {
+    border: none;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.primary {
+    padding: 19px 15px;
+    background-color: var(--gray);
+    color: var(--text-color);
+
+    &::placeholder {
+        color: var(--placeholder-color);
+    }
+}
