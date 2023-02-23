@@ -40,7 +40,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['warn', { ignoreComments: true }],
+        'max-len': ['warn', { ignoreComments: true, code: 120 }],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
     },
