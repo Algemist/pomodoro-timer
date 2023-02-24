@@ -1,3 +1,4 @@
+/// <reference types="redux-persist" />
 declare module '*.scss' {
     interface IClassNames {
         [className: string]: string
