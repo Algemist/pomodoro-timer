@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -7,7 +7,7 @@ export enum ButtonTheme {
     SECONDARY = 'secondary'
 }
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ButtonTheme;
     children: ReactNode;
@@ -20,6 +20,7 @@ export const Button: FC<ButtonProps> = (props) => {
         theme = ButtonTheme.PRIMARY,
         children,
         disabled = false,
+        ...others
     } = props;
 
     const mods = {
@@ -29,7 +30,11 @@ export const Button: FC<ButtonProps> = (props) => {
     };
 
     return (
-        <button type="button" className={classNames(cls.Button, mods, [className])}>
+        <button
+            type="button"
+            className={classNames(cls.Button, mods, [className])}
+            {...others}
+        >
             {children}
         </button>
     );

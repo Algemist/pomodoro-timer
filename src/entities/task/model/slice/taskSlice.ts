@@ -1,15 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { TaskSchema } from '../types/task';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Task, TaskSchema } from '../types/task';
 
 const initialState: TaskSchema = {
-    test: 0,
+    Tasks: [],
 };
 
 export const taskSlice = createSlice({
     name: 'task',
     initialState,
     reducers: {
-
+        createTask: (state, action: PayloadAction<Task>) => {
+            state.Tasks.push(action.payload);
+        },
     },
 });
 

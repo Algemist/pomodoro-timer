@@ -1,3 +1,8 @@
+export interface Task {
+    title: string;
+    pomodoro: number;
+}
+
 export interface TaskSchema {
-    test: number;
+    Tasks: Task[];
 }
